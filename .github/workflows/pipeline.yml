@@ -65,6 +65,10 @@ jobs:
         with:
           python-version: 3.9
 
+      - name: Install Heroku CLI
+        run: |
+          curl https://cli-assets.heroku.com/install.sh | sh
+
       - name: deploy into heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
